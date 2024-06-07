@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+   <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FormAjoutCours</title>
+<link rel="stylesheet" href="formationS.css">
+   </head>
+
+   <body>
+<div class="wrapper">
+    <div class="title">
+      Ajouter un cours :
+    </div>
+
+    <div class="form" name="monFormulaire" id="monFormulaire" method="post" onsubmit="return false">  
+
+           <div class="inputfield">
+          <label>Email Enseignant : <span class="required">*</span> </label>
+          <input type="email" id="email" name="email" required class="input" required placeholder="mail@serveur.com">
+          <div class="alertEmail"></div>
+          </div> 
+
+          <div class="inputfield">
+          <label>Contenu : </label>
+          <input type="file" id="fname" name="fname" class="input" placeholder="saisissez le contenu..">
+          <div class="alertNom"></div>
+       </div>   
+
+        <div class="inputfield">
+          <label>Image : </label>
+          <input type="file" id="lname" name="lname" class="input"placeholder="saisissez les images..">
+            <div class="alertPrenom"></div>
+       </div>   
+
+    
+        <div class="inputfield">
+          <label>Titre : </label>
+          <input type="text" id="titre" name="titre" class="input" placeholder="saisissez le titre.." required>
+            <div class="alerttitre"></div>
+       </div>   
+
+       <div class="inputfield">
+          <label>Catégorie du cours : </label>
+          
+                  <tr>
+                    <td><select name="categorie" id="catg" desabled required>Categories
+                       <option selected value="s">Select</option>
+                    <option value="programmation">Programmation</option>
+                    <option value="maths">Maths</option>
+                    <option value="reseaux">Réseaux</option></select></td>
+                   </tr>
+                    <div class="alertcateg"></div>
+        </div>   
+      <div class="inputfield">
+      <!--	<button class="btn"><a href="Mail.php">Envoyer</a></button>-->
+
+        <button class="btn" type="submit"><a>Envoyer</a></button>
+  
+        <button class="btn"><a href="FRONT.php">Annuler</a></button>
+
+       <!-- <input type="reset" value="Tout enlever" class="btn">
+        <input type="submit" value="Envoyer" class="btn"> -->
+      <!--  href="Mail.php" -->
+      </div>
+    </div>
+    <div class="alert"></div>
+</div>
+
+ <!--<script src="formationS.js"></script> -->
+   </body>
+</html>
+
+ 

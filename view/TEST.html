@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FormAjoutCours</title>
+<link rel="stylesheet" href="TEST.css">
+   </head>
+
+   <body>
+
+<form name="monFormulaire" id="monFormulaire" method="post" onsubmit="return false">
+
+<div>
+  <label class="label">Votre Email :</label> 
+  <input class="controle" type="email" name="mail" required placeholder="mail@serveur.com"> 
+  <span class="resultat"></span>
+</div>
+
+<div>
+  <label class="label">Contenu :</label> 
+  <input class="controle" type="text" name="contribution" required placeholder="..."> 
+  <span class="resultat"></span>
+</div>
+
+<div>
+  <label class="label">Image:</label> 
+  <input class="controle" type="file" name="pseudo" required placeholder> 
+  <span class="resultat"></span>
+</div>
+
+<div>
+  <label class="label">Titre :</label> 
+  <input class="controle" type="text" name="venue"  required> 
+  <span class="resultat"></span>
+</div>
+
+<div>
+  <label class="label">Categorie:</label> 
+   <tr>
+  <td><select name="categorie" id="catg" desabled class="required">*Categories
+         <option selected value="s">Select</option>
+          <option value="programmation">Programmation</option>
+          <option value="maths">Maths</option>
+          <option value="reseaux">Réseaux</option></select></td>
+ </tr>
+  <span class="resultat"></span>
+</div>
+
+<div>
+  <input type="submit" value="Envoyer">
+</div>
+<div>
+  <input type="reset" value="Annuler">
+</div>
+</form>
+
+   </body>
+</html>

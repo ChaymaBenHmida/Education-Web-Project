@@ -1,0 +1,85 @@
+body {
+    font-size: 20px;
+}
+
+*,
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    line-height: 3.5em;
+    text-align: center;
+    font-size: 1em;
+}
+
+h6 {
+    line-height: 35px;
+    font-size: 18px;
+    span {
+        color: green;
+        font-weight: bold;
+    }
+}
+
+.btn {
+    margin: 10px 5px 11px 0px;
+}
+
+.dislike h6 {
+    line-height: 35px;
+    font-size: 18px;
+    span {
+        color: red;
+        font-weight: bold;
+    }
+}
+
+$color1:#ff7942;
+$color2:#f12f0e;
+$color3:#ff0048;
+$color4:#ff0000;
+$white:#fff;
+$black:#000;
+@mixin border($border_px:1px, $border_type:solid, $border_color:#eee) {
+    border: $border_px $border_type $border_color;
+}
+
+.div1 {
+    color: $white;
+    background: $color1;
+    border: 1px solid $color1;
+}
+
+.div2 {
+    color: $white;
+    background: $color2;
+    border: 1px solid $color2;
+}
+
+.div3 {
+    color: $white;
+    background: $color3;
+    border: 1px solid $color3;
+}
+
+.div4 {
+    color: $white;
+    background: $color4;
+    border: 1px solid $color4;
+}
+
+.div_sub {
+    @include border(1px, solid, #ccc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .btn {
+        padding: 7px 2px 8px 2px;
+        font-size: 12px;
+    }
+}

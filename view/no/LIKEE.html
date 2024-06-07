@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+<html>
+   <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FormAjoutCours</title>
+<link rel="stylesheet" href="formationS.css">
+   </head>
+
+  <body ng-app="myModule">
+        <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12" ng-controller="myController">
+            <div class="col-md-12 col-xs-12">
+                <div class="col-md-3 div1 col-xs-3 ">
+                    <p>Language</p>
+                </div>
+                <div class="col-md-3 div2 col-xs-3">
+                    <p>Likes</p>
+                </div>
+                <div class="col-md-3 div3 col-xs-3 dislike">
+                    <p>Dislikes</p>
+                </div>
+                <div class="col-md-3 div4 col-xs-3">
+                    <p>Likes/Dislikes</p>
+                </div>
+            </div>
+            <div class="col-md-12 col-xs-12 text-center " ng-repeat="technology in technologies ">
+                <div class="col-md-3 div_sub col-xs-3">
+                    <h6>{{ technology.name }}</h6>
+                </div>
+                <div class="col-md-3 div_sub col-xs-3">
+                    <h6><span>{{ technology.likes }}</span> Likes</h6>
+                </div>
+                <div class="col-md-3 div_sub col-xs-3 dislike">
+                    <h6><span>{{technology.dislikes}}</span> Dislikes</h6>
+                </div>
+                <div class="col-md-3 div_sub col-xs-3 ">
+                    <button type="button" class="btn btn-success" ng-click="incrementLikes(technology)"><span class="glyphicon glyphicon-thumbs-up"></span> Likes</button>
+                    <button type="button" class="btn btn-danger" ng-click="incrementDislikes(technology)"> <span class="glyphicon glyphicon-thumbs-up"></span>Dislikes</button>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </body>
+    </html>

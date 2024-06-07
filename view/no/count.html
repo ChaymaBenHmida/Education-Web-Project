@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBenders Education</title>
+<body>
+var demo = lidi.create({
+  count : [123, 45], // (C1) INIT LIKES & DISLIKES
+  hWrap : document.getElementById("demoB"),
+ 
+  // (C2) UPDATE LIKES & DISLIKES COUNT METHOD 1
+  // SEND NEW STATUS TO SERVER, SERVER RESPONDS WITH NEW COUNT
+  onChange : (status, recount) => {
+    var data = new FormData();
+    data.append("status", status);
+    fetch("2-dummy.txt", { method: "POST", body: data })
+    .then(res => res.json())
+    .then((update) => { recount(update); })
+    .catch((err) => { console.error(err); });
+  }
+});
+ 
+// (C3) UPDATE LIKES & DISLIKES COUNT METHOD 2
+// MANUALLY CALL THE RECOUNT METHOD
+// demo.recount([999, 888]);
+</body>
+</html>>
